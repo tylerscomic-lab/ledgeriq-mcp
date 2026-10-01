@@ -1,0 +1,13 @@
+version: 1
+name: ledgeriq-ratios
+description: Liquidity, profitability and leverage ratios from raw financial figures with plain-language readings. Handles zero and negative denominators safely.
+runtime: typescript
+entry: server.js
+build:
+  install: npm install
+startCommand:
+  type: http
+  command: node server.js
+  port: 8080
+  healthCheck: /health
+  mcpPath: /mcp

@@ -1,0 +1,13 @@
+version: 1
+name: ledgeriq-depreciation
+description: MACRS schedules, Section 179 and bonus depreciation for business assets with a side-by-side method comparison. 2026 limits.
+runtime: typescript
+entry: server.js
+build:
+  install: npm install
+startCommand:
+  type: http
+  command: node server.js
+  port: 8080
+  healthCheck: /health
+  mcpPath: /mcp

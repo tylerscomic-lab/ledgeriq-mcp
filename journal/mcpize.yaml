@@ -1,0 +1,13 @@
+version: 1
+name: ledgeriq-journal
+description: Plain-English transactions to balanced journal entries, plus adjusting entries, account classification and year-end closing entries. Rule-based and deterministic.
+runtime: typescript
+entry: server.js
+build:
+  install: npm install
+startCommand:
+  type: http
+  command: node server.js
+  port: 8080
+  healthCheck: /health
+  mcpPath: /mcp

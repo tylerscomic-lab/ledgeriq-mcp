@@ -1,0 +1,13 @@
+version: 1
+name: ledgeriq-1099-w2-compliance
+description: Is a 1099 required, which form, when is it due, and what does a late filing cost. 2026 thresholds, deadlines rolled past weekends and holidays, backup withholding and penalties.
+runtime: typescript
+entry: server.js
+build:
+  install: npm install
+startCommand:
+  type: http
+  command: node server.js
+  port: 8080
+  healthCheck: /health
+  mcpPath: /mcp

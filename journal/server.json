@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.tylerscomic-lab/ledgeriq-journal-entries",
+  "title": "LedgerIQ Journal Entry Assistant",
+  "description": "Plain-English transactions to balanced journal entries, adjusting and closing entries.",
+  "version": "2.0.0",
+  "repository": {
+    "url": "https://github.com/tylerscomic-lab/ledgeriq-mcp",
+    "source": "github",
+    "subfolder": "journal"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://openapi-1779155638284.mcpize.run/mcp"
+    }
+  ]
+}

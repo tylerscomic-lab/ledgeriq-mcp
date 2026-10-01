@@ -1,0 +1,13 @@
+version: 1
+name: ledgeriq-entity
+description: "LLC vs S-Corp vs C-Corp for a given profit. Federal tax comparison, S-corp savings with salary sensitivity, compliance costs and conversion steps. Tax year 2026."
+runtime: typescript
+entry: server.js
+build:
+  install: npm install
+startCommand:
+  type: http
+  command: node server.js
+  port: 8080
+  healthCheck: /health
+  mcpPath: /mcp
